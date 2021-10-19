@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--Html file for the small soundboard popup-->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="sounddiv" class="main">
+            
+          </div>
+    </body>
+    <script>
+        var url = new URL(document.URL);
+        const params = url.searchParams;
+        const name = params.get("sound");
+        document.getElementById("sounddiv").innerHTML=name; 
+    </script>
+</html>
