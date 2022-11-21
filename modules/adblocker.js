@@ -1,8 +1,7 @@
 const { ElectronBlocker, Request } = require('@cliqz/adblocker-electron');
 const fetch = require('cross-fetch');
-const logger = require('../utils/logger');
 
-communicator.on('adblocker-enable', () => {
+exports.enableAdBlocker = () => {
   ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
     blocker.enableBlockingInSession(mainWindow.webContents.session);
     blocker.on('request-blocked', (request = Request) => {
@@ -10,4 +9,4 @@ communicator.on('adblocker-enable', () => {
     });
   });
   logger.adblocker('Enabled adblocker!');
-});
+};

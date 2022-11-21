@@ -1,8 +1,11 @@
 {
-    "name": "local-client",
+    "name": "ProTube-App",
     "version": "0.0.1",
     "description": "Frontend part of protube (this is the app that has to display the screen)",
     "main": "app.js",
+    "scripts": {
+        "start:mac": "./node_modules/electron/dist/Electron.app/Contents/MacOS/Electron ."
+    },
     "dependencies": {
         "@cliqz/adblocker-electron": "^1.22.6",
         "colors": "^1.4.0",
