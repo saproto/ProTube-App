@@ -32,5 +32,5 @@ app.on('ready', () => {
 
 // Modify the user agent for all requests to the following urls.
 const filter = {
-  urls: ['https://localhost:3000/*']
+  urls: [`${process.env.SCREEN_COOKIE_URL}`]
 }
